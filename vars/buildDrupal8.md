@@ -14,10 +14,9 @@ Builds a drupal 8 site from composer[^1], creates the database[^2] and imports c
 ## Sample Jenkinsfile
 
 ```groovy
-    #!groovy​
+#!groovy
 // Include Xeno Global Library
-// @Library(['MPP_JENKINS']) _
-library identifier: 'MPP_JENKINS', retriever: modernSCM(github(id: 'MPPJENKINSREPO', repoOwner: 'michaelpporter', repository: 'jenkins-lib'))
+library identifier: 'MPP_JENKINS@master', retriever: modernSCM(github(id: 'MPPJENKINSREPO', repoOwner: 'michaelpporter', repository: 'jenkins-lib'))
 
 def getLabel() {
     // Label of the Jenkins slave to run on, master if you only have one esrver
